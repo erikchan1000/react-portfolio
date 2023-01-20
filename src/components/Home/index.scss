@@ -1,26 +1,36 @@
+.scoot-left {
+    position: relative;
+    left: -10px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    height: 100%;
+    top: 0%;
+    margin-left: 17rem;
 }
-
 
 .home-page {
     .hover-zone {
-        position: relative;
+        position: absolute;
         z-index: 0;
         opacity: 1;
-        top: 80%;
+        height: 50px;
+        width: fit-content;
+        align-self:flex-end;
+        margin-right: 3rem;
+        bottom: 0%;
+        right: 10%;
     }
 
     .text-zone {
-        position: absolute;
-        /* scale with screen size */
-        left: 20rem;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40%;
-        max-height: 90%;
-        margin-left: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: 20%;
+        z-index: 1;
     }
 
     h1 {
@@ -28,7 +38,7 @@
         font-size: 5vmin;
         font-family: 'Coolvetica';
         font-weight: 400;
-        margin: 0;
+        margin: 3rem;
 
         &::before {
             content: '<h1>';
@@ -55,18 +65,18 @@
             font-family: 'La Belle Aurore';
             color: #ffd700;
             font-size: 2vmin;
-            position: absolute;
-            margin-top: 5rem;
-            margin-left: 2rem;
             animation: custom 1s 1.7s backwards;
             opacity: 0.6;
+            position: absolute;
+            left: 10px;
+            margin-top: 2rem;
             
         }
         
-
+    
 
         img {
-            width: 5vmin;
+            width: 4vmin;
             margin-left: 2rem;
             opacity: 0;
             height: auto;
@@ -96,6 +106,10 @@ h2 {
     font-family: sans-serif;
     letter-spacing: 3px;
     animation: fadeIn 1s 1.8s backwards;
+    top: 3rem;
+    position: relative;
+    display: inline-block
+    
 }
 
 .flat-button {
@@ -109,6 +123,20 @@ h2 {
     border : 1px solid #ffd700;
     margin-top: 25px;
     float: left;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    top: 3rem;
+    animation: fadeIn 1s 1.8s backwards;
+    white-space: nowrap;
+    border-radius: 8px;
+    transition: background-color 0.75s;
+
+    &:hover {
+        background-color: #ffd700;
+        color: #333;
+    }
+
 }
 
 @media screen and (max-width: 768px) and (max-height: 1200px) {

@@ -55,7 +55,7 @@ function consoleText(words, id, colors) {
 const Hover = () => {
     
     useEffect (() => {
-        consoleText(['Hello World.', 'Console Text', 'Made with Love.'], 'text',['tomato','rebeccapurple','lightblue']);
+        consoleText(['print("Hello World!")', 'Console.log("React.js")', 'System.out.println("gsap")'], 'text',['tomato','rebeccapurple','lightblue']);
     }, [])
 
     
