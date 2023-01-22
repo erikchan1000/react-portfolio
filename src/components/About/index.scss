@@ -80,6 +80,10 @@
     position: absolute;
 }
 
+.adjust {
+    z-index: 10;
+}
+
 
 .cubespinner {
     -webkit-animation-name: spincube;
