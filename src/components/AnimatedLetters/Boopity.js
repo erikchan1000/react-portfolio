@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react'
 
     
 
-const Boopity = ({children, timing}) => {
+const Boopity = ({children, timing, startColor, endColor}) => {
 
     const [isBooped, setIsBooped] = useState(false)
     const [isHovered, setIsHovered] = useState(false)
@@ -12,7 +12,7 @@ const Boopity = ({children, timing}) => {
     const style = {
         display: 'inline-block',
         animation: isBooped ? 'rubberBand 1s' : 'none',
-        color: isHovered ? '#ffd700' : 'white',
+        color: isHovered ? `${startColor}` : `${endColor}`,
         width: children === " " ? '10px' : 'fit-content'
     }
 
@@ -32,6 +32,7 @@ const Boopity = ({children, timing}) => {
     , [isBooped])
 
     useEffect(() => {
+        console.log(startColor, endColor)
         if (!isHovered) {
             return
             }

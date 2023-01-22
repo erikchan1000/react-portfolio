@@ -21,21 +21,22 @@ const Home = () => {
         <div className="container home-page"> 
             <div className="text-zone">
                 <h1>
-                <AnimatedLetters strArray={intro1} letterClass={letterClass} id={idx}/>
+                <AnimatedLetters strArray={intro1} letterClass={letterClass} id={idx}
+                startColor="#ffd700" endColor="white"/>
                 <br/> 
-                <AnimatedLetters strArray={intro2} letterClass={letterClass} id={idx}/>
+                <AnimatedLetters strArray={intro2} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
                 <img src={logoE} alt="developer" />
 
                 <span className="scoot-left">
-                    <AnimatedLetters strArray={nameArray} letterClass={letterClass} id={idx}/>
+                    <AnimatedLetters strArray={nameArray} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
                 </span>
                 <br/>
-                <AnimatedLetters strArray={jobArray2} letterClass={letterClass} id={idx}/>
+                <AnimatedLetters strArray={jobArray2} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
                 <br/>
                 </h1>
                 
                 <h2>
-                    <AnimatedLetters strArray={jobArray} letterClass={letterClass} id={idx}/>
+                    <AnimatedLetters strArray={jobArray} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
                 </h2>
 
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>

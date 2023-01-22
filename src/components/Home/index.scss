@@ -12,6 +12,11 @@
     margin-left: 17rem;
 }
 
+.console-container {
+    width: fit-content;
+    display: flex;
+}
+
 .home-page {
     .hover-zone {
         position: absolute;
@@ -19,7 +24,6 @@
         opacity: 1;
         height: 50px;
         width: fit-content;
-        align-self:flex-end;
         margin-right: 3rem;
         bottom: 0%;
         right: 10%;
