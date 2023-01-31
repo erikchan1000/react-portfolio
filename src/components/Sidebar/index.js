@@ -29,13 +29,13 @@ const Sidebar = () => (
 
         <ul>
             <li>
-                <a target="blank" rel='noreferrer' href='https://www.linkedin.com/in/erikchan01/'>
+                <a target="blank" rel='noreferrer' href='https://www.linkedin.com/in/tony-chan-209540229/'>
                     <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
                 </a>
             </li>
 
             <li>
-                <a target="blank" rel='noreferrer' href='https://github.com/erikchan1000'>
+                <a target="blank" rel='noreferrer' href='https://github.com/TonyYep'>
                     <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
                 </a>
             </li>

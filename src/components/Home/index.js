@@ -5,6 +5,7 @@ import Hover from '../Hover'
 import {useState, useEffect, useRef} from 'react'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters.js'
 import Logo from './Logo/Logo.js'
+import Loader from 'react-loaders'
 
 const Home = () => {
 
@@ -17,39 +18,41 @@ const Home = () => {
     const idx = useRef(0)
 
     return (
-        
-        <div className="container home-page"> 
-            <div className="text-zone">
-                <h1>
-                <AnimatedLetters strArray={intro1} letterClass={letterClass} id={idx}
-                startColor="#ffd700" endColor="white"/>
-                <br/> 
-                <AnimatedLetters strArray={intro2} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
-                <img src={logoE} alt="developer" />
+        <>
+            <div className="container home-page"> 
+                <div className="text-zone">
+                    <h1>
+                    <AnimatedLetters strArray={intro1} letterClass={letterClass} id={idx}
+                    startColor="#ffd700" endColor="white"/>
+                    <br/> 
+                    <AnimatedLetters strArray={intro2} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
+                    <img src={logoE} alt="developer" />
 
-                <span className="scoot-left">
-                    <AnimatedLetters strArray={nameArray} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
-                </span>
-                <br/>
-                <AnimatedLetters strArray={jobArray2} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
-                <br/>
-                </h1>
+                    <span className="scoot-left">
+                        <AnimatedLetters strArray={nameArray} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
+                    </span>
+                    <br/>
+                    <AnimatedLetters strArray={jobArray2} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
+                    <br/>
+                    </h1>
+                    
+                    <h2>
+                        <AnimatedLetters strArray={jobArray} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
+                    </h2>
+
+                    <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+                    <br/>
+                </div>
+                <div className="hover-zone">
+                    <Hover/>
+                </div>
                 
-                <h2>
-                    <AnimatedLetters strArray={jobArray} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
-                </h2>
-
-                <Link to="/contact" className='flat-button'>CONTACT ME</Link>
-                <br/>
+                <Logo/>
+                
             </div>
-            <div className="hover-zone">
-                <Hover/>
-            </div>
-            
-            <Logo/>
-            
-        </div>
-    )
+            <Loader type="pacman"/>
+        </>
+    )   
 }
 
 export default Home
