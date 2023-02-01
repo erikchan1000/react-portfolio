@@ -67,4 +67,15 @@
     z-index: 0;
 }
 
+@media screen and (max-width: 768px) and (max-height: 1200px) {
+    .logo-container {
+        bottom: 20%;
+        top: auto;
+        height: 35%;
+        width: 30%;
+        bottom: 0;
+        right: 12%;
+    }
+}
+
 

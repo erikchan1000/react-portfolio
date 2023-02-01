@@ -11,11 +11,19 @@ const Home = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = ["ony Chan"]
-    const jobArray = ["Fullstack Developer, Javascript Enthusiast"]
+    const jobArray = ["Fullstack Developer, "]
+    const temp = ["Javascript Enthusiast"]
     const jobArray2 = ["web developer,"]
     const intro1 = ["Hi, "]
     const intro2 = ["I'm"]
     const idx = useRef(0)
+    let [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setScreenWidth(window.innerWidth)
+        })
+    }, [])
 
     return (
         <>
@@ -38,9 +46,11 @@ const Home = () => {
                     
                     <h2>
                         <AnimatedLetters strArray={jobArray} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
+                        {screenWidth < 800 ? <br/> : null}
+                        <AnimatedLetters strArray={temp} letterClass={letterClass} id={idx} startColor="#ffd700" endColor="white"/>
                     </h2>
 
-                    <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+                    <Link to="/portfolio" className='flat-button'>CONTACT ME</Link>
                     <br/>
                 </div>
                 <div className="hover-zone">
