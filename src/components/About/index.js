@@ -18,7 +18,7 @@ const About = () => {
                         <AnimatedLetters letterClass="text-animate" strArray={["About me"]} id={idx} startColor="white" endColor="#ffd700"/>
                     </h1>
                     <p>
-                        I am Tony, a passionate mathematics major. I am currently a senior at the University of California, Santa Barbara. I am a full-stack developer with a focus on front-end development. I am proficient in React, Angular, and Python. I am also familiar with HTML, CSS, JavaScript, and SQL. I am currently looking for a full-time position as a software engineer. I am also open to internships and part-time positions. Feel free to contact me if you have any questions.
+                        I am your friendly neighborhood Tony, a passionate statistics and data science major. I am currently a senior at the University of California, Santa Barbara. I am a full-stack developer with a focus on front-end development. I am proficient in React, Angular, and Python. I am also familiar with HTML, CSS, JavaScript, and SQL. I am currently looking for a full-time position as a software engineer. I am also open to internships and part-time positions. Feel free to contact me if you have any questions.
                     </p>
                     <p>
                         Filler
