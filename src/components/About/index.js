@@ -5,11 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDatabase, faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { faAngular, faFigma, faReact, faHtml5, faPython } from "@fortawesome/free-brands-svg-icons";
 import Loader from 'react-loaders'
-import UCSBLogo from "../../assets/images/UCSBLogo.png"
+import UCBLogo from "../../assets/images/UCBLogo.png"
 
 const About = () => {
     const idx = useRef(0);
-
+    //check environment variables
+    console.log('test')
+    console.log(process.env.REACT_APP_EMAIL_SERVICE);
     return (
         <>
             <div className="container about-page">
@@ -18,13 +20,19 @@ const About = () => {
                         <AnimatedLetters letterClass="text-animate" strArray={["About me"]} id={idx} startColor="white" endColor="#ffd700"/>
                     </h1>
                     <p>
-                        I am Tony, a passionate mathematics major. I am currently a senior at the University of California, Santa Barbara. I am a full-stack developer with a focus on front-end development. I am proficient in React, Angular, and Python. I am also familiar with HTML, CSS, JavaScript, and SQL. I am currently looking for a full-time position as a software engineer. I am also open to internships and part-time positions. Feel free to contact me if you have any questions.
+                        Hello, my name is Tony Chan. I am a student who has studied Financial Mathematics and Statistics at UC Santa Barbara for two years, 
+                        before transferring to UC Berkeley to study Data Science. Through my studies I have developed great respect and appreciation for academia and 
+                        feel in touch with my university. This is why being a researcher and contributing to a peer-reviewed journal is in my bucket list. In the meantime,
+                        I am striving to find a meaningful internship in which I am able to grow as a Data Scientist, and to build proficiency in the field of Machine Learning.
+                        I am infatuated by the probabalistic approach taken to build a nueral network
+                        At the moment I am interested in internships and research opportunities related to Data Engineering/Science or Machine Learning.
+
                     </p>
-                    <p>
-                        Filler
+                    <p style={{whiteSpace: 'pre-wrap'}}>
+                        Skills:    Python    |    PyTorch    |    R    |    SQL    |    Latex    |    Regression Analysis
                     </p>
-                    <p>
-                        Filler
+                    <p style={{whiteSpace: 'pre-wrap'}}>
+                        Interests/Hobbies:   Machine Learning   |   Peer-Reviewed Journals   |   Badminton  |   Dragon Boat
                     </p>
                 </div>
 
@@ -39,7 +47,7 @@ const About = () => {
                             <FontAwesomeIcon className="adjust" icon={faPython} color="#fce303"/>
                         </div>
                         <div className="face2">
-                            <img src={UCSBLogo} alt="UCSB Logo" style={{width: "20rem"}}/>
+                            <img src={UCBLogo} alt="UCB Logo" style={{width: "20rem"}}/>
                         </div>
                         <div className="face3">
                             <FontAwesomeIcon className="adjust" icon={faReact} color="#28A4D9"/>
