@@ -35,15 +35,7 @@ const Contact = () => {
     } else {
       //send to chantony@gmail.com
       emailjs
-        .sendForm(
-          `${process.REACT_APP_EMAIL_SERVICE}`,
-          `${process.REACT_APP_EMAIL_TEMPLATE}`,
-          {
-            from_name: contactInfo.name,
-            from_subject: contactInfo.subject,
-            from_message: contactInfo.message,
-          }
-        )
+        .sendForm(`${process.env.REACT_APP_EMAIL_SERVICE}`, `${process.env.REACT_APP_EMAIL_TEMPLATE}`, form.current, `${process.env.REACT_APP_EMAIL_PUBLIC_KEY}`)
         .then(
           (result) => {
             alert('Message sent successfully')
@@ -76,7 +68,7 @@ const Contact = () => {
             <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input placeholder="Name" type="text" name="name" required 
+                  <input placeholder="Name" type="text" name="from_name" required 
                     onChange={(e) =>
                       setContactInfo({ ...contactInfo, name: e.target.value })
                     }
@@ -86,7 +78,7 @@ const Contact = () => {
                   <input
                     placeholder="Email"
                     type="email"
-                    name="email"
+                    name="from_email"
                     required
                     onChange={(e) =>
                       setContactInfo({ ...contactInfo, email: e.target.value })
